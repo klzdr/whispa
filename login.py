@@ -84,8 +84,8 @@ def do_login(event=None):
     if user and verify_password(password, user[3], user[4]):
         messagebox.showinfo("Success", "Login successful!")
         root.destroy()  # Close login window
-        # Open home.py with username
-        home_path = os.path.join(os.path.dirname(__file__), "home.py")
+        # Open index.py with username
+        home_path = os.path.join(os.path.dirname(__file__), "index.py")
         subprocess.Popen([sys.executable, home_path, username])
     else:
         messagebox.showerror("Error", "Invalid username or password!")
